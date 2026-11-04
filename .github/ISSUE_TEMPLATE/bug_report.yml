@@ -1,0 +1,58 @@
+name: "🐛 Повідомити про помилку (Bug Report)"
+description: "Щось працює не так, як очікувалося? Опишіть проблему тут."
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Дякуємо за допомогу в тестуванні! Будь ласка, заповніть поля нижче, щоб ми могли швидше відтворити та виправити помилку.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: "Що сталося? (Опис проблеми)"
+      description: "Коротко опишіть, що саме пішло не так і що ви очікували побачити натомість."
+      placeholder: "Наприклад: При натисканні на кнопку 'Зберегти курс' сторінка зависає і нічого не відбувається..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Кроки для відтворення"
+      description: "Опишіть покроково, як нам повторити цю помилку."
+      placeholder: |
+        1. Перейти на сторінку '...'
+        2. Натиснути на '...'
+        3. Ввести дані '...'
+        4. Побачити помилку
+    validations:
+      required: true
+
+  - type: input
+    id: page-url
+    attributes:
+      label: "Посилання (URL) на сторінку"
+      description: "Скопіюйте адресу сторінки або вкажіть розділ, де виникла проблема."
+      placeholder: "https://..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Скріншоти або відео"
+      description: "Просто перетягніть (drag-and-drop) або вставте з буфера обміну (Ctrl+V / Cmd+V) зображення прямо в це поле."
+      placeholder: "Вставте скріншот сюди..."
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: "Пристрій та браузер"
+      description: "З якого пристрою та браузера ви користувалися системою?"
+      placeholder: "Наприклад: MacBook (Chrome), iPhone (Safari), Windows (Edge) або Telegram-бот"
+    validations:
+      required: false
